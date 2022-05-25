@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="/Css/sign.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <header class="header-sign">
+        <a class="name logo logo-sign-up" href="/index.html" title="Return to Home Page"><i
+                class="fas fa-utensils"></i>SPRINGY'S</a>
+    </header>
+    <section class="sign-form-container">
+        <div class="big">
+            <form action="/index.html" class="form-one">
+                <h3>Sign Up</h3>
+                <div class="flex">
+                    <div class="inputbox">
+                        <span>your full name</span>
+                        <input type="text" name="" placeholder="Name..." id="sign-name" class="box"
+                            title="enter your full name as: first-name second-name">
+                    </div>
+                    <div class="inputbox">
+                        <span>your email</span>
+                        <input type="email" name="" placeholder="Email..." id="sign-email" class="box"
+                            title="example: ellonmask2@email.com">
+                    </div>
+                    <div class="inputbox">
+                        <span>your password</span>
+                        <input type="password" name="" placeholder="Password..." id="sign-password" class="box" title="minimum No. characters = 8
+                   starts with uppercase character
+                   include one digit atleast
+                    include one special charater
+                    no white space allowed">
+                    </div>
+                    <div class="inputbox">
+                        <span>repeat password</span>
+                        <input type="password" name="" placeholder="Confirm..." id="confirm-password" class="box">
+                    </div>
+                    <div class="inputbox">
+                        <span>your number Ex: 0123-456-7890</span>
+                        <input type="tel" placeholder="Number..." name="" id="sign-number" class="box"
+                            pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+                    </div>
+                    <div class="inputbox">
+                        <span>your nationality</span>
+                        <input type="text" placeholder="Nationality..." name="" id="sign-nationality" class="box">
+                    </div>
+                    <div class="inputbox">
+                        <span>your city</span>
+                        <input type="text" placeholder="City..." name="" id="sign-city" class="box">
+                    </div>
+                    <div class="inputbox">
+                        <span>Gender</span>
+                        <select name="Gender" class="box" id="sign-gender">
+                            <option value="">-- select one --</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="sign-up-btn"> <input type="submit" value="Sign Up Now" class="btn"></div>
+            </form>
+
+            <span>or you can sign Up with</span>
+            <div class="share">
+                <form action="/index.html" class="form-two">
+                    <button type="submit" class="fab fa-facebook"></button>
+                    <button type="submit" class="fab fa-google"></button>
+                    <button type="submit" class="fab fa-twitter"></button>
+                </form>
+            </div>
+            <div class="terms">
+                <label for="agree">by creating an account with us, you agree to our <a href="#">terms &
+                        conditions</a></label>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="/Js/sign_up.js"></script>
+</body>
+
+</html>

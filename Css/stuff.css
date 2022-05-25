@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ce1edb;
+  border-radius: 5rem;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.heading span {
+  font-family: "Satisfy", cursive;
+  font-size: 5rem;
+  color: #ce1edb;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.8rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #fff;
+  background: #ce1edb;
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  background-color: #130f40;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 10%;
+}
+
+header .logo {
+  font-size: 4rem;
+  font-weight: bolder;
+  color: #130f40;
+}
+
+header .logo i {
+  padding-right: 1rem;
+  color: #ce1edb;
+}
+
+.banner .grid-banner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.banner .grid-banner .grid {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 50rem;
+}
+
+.banner .grid-banner .grid:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #130f40;
+}
+
+.banner .grid-banner .grid:hover img {
+  display: none;
+}
+
+.banner .grid-banner .grid:hover .content {
+  display: block;
+}
+
+.banner .grid-banner .grid img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner .grid-banner .grid .content {
+  position: absolute;
+  top: 10rem;
+  padding: 0 2rem;
+  display: none;
+}
+
+.banner .grid-banner .grid .content.center {
+  text-align: center;
+  width: 100%;
+}
+
+.banner .grid-banner .grid .content.center span {
+  color: #ce1edb;
+}
+
+.banner .grid-banner .grid .content.center h3 {
+  color: #fff;
+}
+
+.banner .grid-banner .grid .content span {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.banner .grid-banner .grid .content h3 {
+  font-size: 3rem;
+  color: #fff;
+  padding-top: 3rem;
+}
+
+.float {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  bottom: 4rem;
+  right: 3rem;
+  background-color: #ce1edb;
+  color: #fff;
+  border-radius: 2rem;
+  text-align: center;
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.float:hover {
+  background-color: #130f40;
+  color: #ce1edb;
+  -webkit-transform: scale(1.1, 1);
+          transform: scale(1.1, 1);
+}
+
+.float .my-float {
+  margin-top: 30%;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner .grid-banner .grid {
+    height: 90rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 40%;
+  }
+  .banner .grid-banner .grid {
+    height: 90rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 30%;
+  }
+  .banner .grid-banner .grid {
+    height: 90rem;
+  }
+}
+/*# sourceMappingURL=stuff.css.map */

@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+}
+$violet: #ce1edb;
+$black: #130f40;
+$white: #fff;
+$light-color: #666;
+$light-bg: #f7f7f7;
+$border: 0.1rem solid rgba(0, 0, 0, 0.2);
+$box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
+}
+@mixin font($size) {
+  font-family: "Satisfy", cursive;
+  font-size: $size;
+  color: $violet;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: $white;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $violet;
+    border-radius: 5rem;
+  }
+}
+
+section {
+  padding: 2rem 9%;
+}
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+
+  span {
+    @include font(5rem);
+  }
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.8rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: $white;
+  background: $violet;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: $black;
+  }
+}
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  box-shadow: $box-shadow;
+  z-index: 1000;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 10%;
+
+  .logo {
+    font-size: 4rem;
+    font-weight: bolder;
+    color: $black;
+    i {
+      padding-right: 1rem;
+      color: $violet;
+    }
+  }
+}
+.banner {
+  .grid-banner {
+    @include grid(30rem);
+    .grid {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      height: 50rem;
+
+      &:hover {
+        img {
+          display: none;
+        }
+        transform: scale(1.1);
+        .content {
+          display: block;
+        }
+        background-color: $black;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .content {
+        position: absolute;
+        top: 10rem;
+        padding: 0 2rem;
+        display: none;
+        &.center {
+          text-align: center;
+          width: 100%;
+          span {
+            color: $violet;
+          }
+          h3 {
+            color: $white;
+          }
+        }
+        span {
+          font-size: 2.5rem;
+          color: $white;
+        }
+        h3 {
+          font-size: 3rem;
+          color: $white;
+          padding-top: 3rem;
+        }
+      }
+    }
+  }
+}
+.float {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  bottom: 4rem;
+  right: 3rem;
+  background-color: $violet;
+  color: $white;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    background-color: $black;
+    color: $violet;
+    transform: scale(1.1, 1);
+  }
+  .my-float {
+    margin-top: 30%;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .banner {
+    .grid-banner {
+      .grid {
+        height: 90rem;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 40%;
+  }
+  .banner {
+    .grid-banner {
+      .grid {
+        height: 90rem;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 350px) {
+  html {
+    font-size: 30%;
+  }
+  .banner {
+    .grid-banner {
+      .grid {
+        height: 90rem;
+      }
+    }
+  }
+}
