@@ -522,7 +522,7 @@ header {
       font-size: 2.5rem;
       color: $light-color;
       cursor: pointer;
-      outline: none;
+      outline-style: none;
 
       &:hover {
         color: $violet;
