@@ -638,7 +638,7 @@ header .icons div:hover {
   right: 1.5rem;
   font-size: 2.5rem;
   color: #666;
-  cursor: pointer;
+  cursor: default;
   outline-style: none;
 }
 
